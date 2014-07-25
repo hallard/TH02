@@ -1,0 +1,40 @@
+#######################################
+# Syntax Coloring Map For TH02 Sensor
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+TH02	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+getId KEYWORD2
+getStatus KEYWORD2
+isConverting  KEYWORD2
+waitEndConversion KEYWORD2
+getConfig KEYWORD2
+setConfig KEYWORD2
+startTempConv KEYWORD2
+startRHConv KEYWORD2
+roundInt KEYWORD2
+getConversionValue  KEYWORD2
+getConpensatedRH  KEYWORD2
+getLastRawRH  KEYWORD2
+getLastRawTemp  KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+TH02_I2C_ERR LITERAL1
+TH02_UNINITIALIZED_TEMP LITERAL1
+TH02_UNINITIALIZED_RH LITERAL1
+TH02_CONVERSION_TIME_OUT LITERAL1
