@@ -17,7 +17,7 @@ Code based on following datasheet http://www.hoperf.com/upload/sensor/TH02_V1.1.
 List of features implemented in this library:
 
 - Reading device ID
-- Stating a Temperature / Humidity conversion in normal/fast mode
+- Starting a Temperature / Humidity conversion in normal/fast mode
 - Keep in memory last Temperature and Humidity with 2 digits precision
 - Calculate Linear and temperature compensation for Humidity
 - Waiting end of conversion with time out 
