@@ -33,27 +33,29 @@ To find your Arduino folder go to File>Preferences in the Arduino IDE.
 See [this tutorial][1] on Arduino libraries.
 <br/>
 This library depends on fast and optimized I2C library since Arduino wire library can't do repeated start. This I2C library is really a nice piece of code. It's faster than original wire library and require less memory and flash. 
-See [this page][2] for download and more information
+See DSS Circuit [page][2] for information and download. Lot of good readings on I2C stuff.  
 <b>TH02 library will not work until you install I2C library.</b>
 
-###MISC / possible issues
+###Possible issues
 - The library and examples are continuously improved as bugs and stability issues are discovered. Be sure to check back often for changes.
-- Don't sand any IC2 command to TH02 when starting conversion except the one for polling ready flag, if not could lock up the RDY flag to be always busy.
+- Don't send any IC2 command to TH02 when starting conversion except the one for polling ready flag, if not could lock up the RDY flag to be always busy.
 
 
 ###Sample usage
-- [GetTempHum][3]
+- [GetTempHum][3] Display Temperature and Humidity using various library parameters
 
 ##Blog dedicated post
-http://hallard.me/th02-library/
+See this [post][5] for information
 
 ##Why
 - I have spent a lot of time developing this library. I made it open source because I believe a lot of people can benefit from this new powerful sensor. I hope people will also contribute and build on my work.
 - I have long tested other temperature and humidity sensor, but this one is small, cheap, factory calibrated, low power, breadboard friendly or easy PCB soldering, fast response and for all of this it is an excellent humidity and temperature sensor.
 
-## See news and other projects on my [blog][4] 
+##Misc
+ See news and other projects on my [blog][4] 
  
 [1]: http://learn.adafruit.com/arduino-tips-tricks-and-techniques/arduino-libraries
 [2]: http://www.dsscircuits.com/index.php/articles/66-arduino-i2c-master-library
 [3]: https://github.com/hallard/TH02/blob/master/Examples/GetTempHum/GetTempHum.ino
 [4]: http://hallard.me
+[5]: http://hallard.me/th02-library/
