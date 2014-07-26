@@ -56,6 +56,6 @@ See this [post][5] for information
  
 [1]: http://learn.adafruit.com/arduino-tips-tricks-and-techniques/arduino-libraries
 [2]: http://www.dsscircuits.com/index.php/articles/66-arduino-i2c-master-library
-[3]: https://github.com/hallard/TH02/blob/master/Examples/GetTempHum/GetTempHum.ino
+[3]: https://github.com/hallard/TH02/blob/master/examples/GetTempHum/GetTempHum.ino
 [4]: http://hallard.me
 [5]: http://hallard.me/th02-library/
