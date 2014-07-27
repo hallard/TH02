@@ -37,8 +37,9 @@
 #define TH02_I2C_ERR 0xFF
 
 // Unititialized values (arbitrary)
-#define TH02_UNINITIALIZED_TEMP 55555
-#define TH02_UNINITIALIZED_RH   1111
+#define TH02_UNINITIALIZED_TEMP 55555 // int32_t internal value 
+#define TH02_UNINITIALIZED_RH   1111  // int32_t internal value
+#define TH02_UNDEFINED_VALUE    12345 // int16_t returned value
 
 // we decide error if conversion is >= 50ms 
 #define TH02_CONVERSION_TIME_OUT  50
