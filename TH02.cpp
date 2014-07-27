@@ -221,7 +221,7 @@ int16_t TH02::roundInt(float value)
 Function: getConversionValue
 Purpose : return the last converted value to int * 10 to have 1 digit prec.  
 Input   : float value
-Output  : int value rounded but multiplied per 10
+Output  : value rounded but multiplied per 10 or TH02_UNDEFINED_VALUE on err
 Comments: - temperature and rh raw values (*100) are stored for raw purpose
           - the configuration register is checked to see if last conv was
             a temperature or humidity conversion
@@ -249,7 +249,7 @@ int16_t TH02::getConversionValue(void)
   // Error reading config ?
   if (config == TH02_I2C_ERR)
   {
-    return 0;
+    return TH02_UNDEFINED_VALUE;
   }
   
   // last conversion was temperature ?
@@ -307,7 +307,7 @@ int16_t TH02::getConpensatedRH(bool round)
   // did we had a previous measure RH
   if (rh == TH02_UNINITIALIZED_RH)
   {
-    return rh;
+    return TH02_UNDEFINED_VALUE;
   }
   else
   {
