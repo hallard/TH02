@@ -258,15 +258,7 @@ int16_t TH02::getConversionValue(void)
     result >>= 2;  // remove 2 unused LSB bits
     result *= 100; // multiply per 100 to have int value with 2 decimal
     result /= 32;  // now apply datasheet formula
-    if(result >= 5000)
-    {
-      result -= 5000;
-    }
-    else
-    {
-      result -= 5000;
-      result = -result;
-    }
+    result -= 5000;
     
     // now result contain temperature * 100
     // so 2134 is 21.34 C
