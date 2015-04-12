@@ -14,6 +14,7 @@
 // Written by Charles-Henri Hallard (http://hallard.me)
 //
 // History : V1.00 2014-07-14 - First release
+//           V1.10 2015-04-13 - changed to Wire library instead of I2C
 //
 // All text above must be included in any redistribution.
 //
@@ -64,25 +65,31 @@
 
 class TH02 { 
   public:
-
+            TH02(uint8_t address);
+    uint8_t getId(uint8_t * pvalue);
     uint8_t getId(void);
-    uint8_t getStatus(void);
-    bool    isConverting(void);
+    uint8_t getStatus(uint8_t * pvalue);
+    boolean isConverting(void);
     uint8_t waitEndConversion(void);
-    uint8_t getConfig(void);
-    bool    setConfig(uint8_t config);
-    bool    startTempConv(bool fastmode = false, bool heater = false);
-    bool    startRHConv(bool fastmode = false, bool heater = false);
+    uint8_t getConfig(uint8_t * pvalue);
+    uint8_t setConfig(uint8_t config);
+    uint8_t startTempConv(boolean fastmode = false, boolean heater = false);
+    uint8_t startRHConv(boolean fastmode = false, boolean heater = false);
     int16_t roundInt(float value);
     int16_t getConversionValue(void);
-    int16_t getConpensatedRH(bool round);
+    int16_t getConpensatedRH(boolean round);
     int32_t getLastRawRH(void);
     int32_t getLastRawTemp(void);
 
-  protected:
-  
-    int16_t temperature; // Last measured temperature (for linearization)
-    int16_t rh;          // Last mesuared RH
+  private:
+
+    uint8_t writeCommand(uint8_t command, boolean release=true);
+    uint8_t writeRegister(uint8_t reg, uint8_t value);
+    uint8_t readRegister(uint8_t reg, uint8_t * value);
+
+    int32_t _last_temp; // Last measured temperature (for linearization)
+    int32_t _last_rh;   // Last measured RH
+    uint8_t _address;   // I2C Module Address
 };
 
 #endif
