@@ -26,15 +26,17 @@ List of features implemented in this library:
 This is an initial release, it could contain bugs, but works fine for now. Please let me know if you find issues.
 
 ###Installation
-Copy the content of this library in the "Arduino/libraries/TH02" folder.
+Copy the content of this library in your Arduino libraries folder in your sketchbook location, you should have now "your_sketchbook_folder/libraries/TH02".
 <br />
-To find your Arduino folder go to File>Preferences in the Arduino IDE.
+To find your Arduino sketchbook location folder, in Arduino IDE, go to File>Preferences in the Arduino IDE.
 <br/>
 See [this tutorial][1] on Arduino libraries.
 <br/>
-This library depends on fast and optimized I2C library since Arduino wire library can't do repeated start. This I2C library is really a nice piece of code. It's faster than original wire library and require less memory and flash. 
+<strike>This library depends on fast and optimized I2C library since Arduino wire library can't do repeated start. This I2C library is really a nice piece of code. It's faster than original wire library and require less memory and flash. 
 See DSS Circuit [page][2] for information and download. Lot of good readings on I2C stuff.  
-<b>TH02 library will not work until you install I2C library.</b>
+<b>TH02 library will not work until you install I2C library.</b></strike>
+<br/>  
+<b>Updated April 2015</b>, This library now use Arduino Wire library.  
 
 ###Possible issues
 - The library and examples are continuously improved as bugs and stability issues are discovered. Be sure to check back often for changes.
