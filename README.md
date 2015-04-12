@@ -35,7 +35,7 @@ See [this tutorial][1] on Arduino libraries.
 <strike>This library depends on fast and optimized I2C library since Arduino wire library can't do repeated start. This I2C library is really a nice piece of code. It's faster than original wire library and require less memory and flash. 
 See DSS Circuit [page][2] for information and download. Lot of good readings on I2C stuff.  
 <b>TH02 library will not work until you install I2C library.</b></strike>
-<br/>  
+<br/>   
 <b>Updated April 2015</b>, This library now use Arduino Wire library.  
 
 ###Possible issues
