@@ -291,48 +291,9 @@ int16_t TH02::getConversionValue(void)
       result  = Wire.read() << 8;
       result |= Wire.read();
 
-<<<<<<< HEAD
       // Get configuration to know what was asked last time
       if (getConfig(&config)==0)
       {
-=======
-  // Get configuration to know what was asked last time
-  config = getConfig();
-  
-  // Error reading config ?
-  if (config == TH02_I2C_ERR)
-  {
-    return TH02_UNDEFINED_VALUE;
-  }
-  
-  // last conversion was temperature ?
-  else  if( config & TH02_CONFIG_TEMP)
-  {
-    result >>= 2;  // remove 2 unused LSB bits
-    result *= 100; // multiply per 100 to have int value with 2 decimal
-    result /= 32;  // now apply datasheet formula
-    result -= 5000;
-    
-    // now result contain temperature * 100
-    // so 2134 is 21.34 C
-    
-    // Save raw value 
-    temperature = result;
-  }
-  // it was RH conversion
-  else
-  {
-    result >>= 4;  // remove 4 unused LSB bits
-    result *= 100; // multiply per 100 to have int value with 2 decimal
-    result /= 16;  // now apply datasheet formula
-    result -= 2400;
-
-    // now result contain humidity * 100
-    // so 4567 is 45.67 % RH
-    rh = result;
-  }
->>>>>>> 3bbf7840a1bf4cef822943283e3229cd180a02ae
-
         // last conversion was temperature ?
         if( config & TH02_CONFIG_TEMP)
         {
