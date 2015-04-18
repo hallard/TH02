@@ -82,7 +82,7 @@ uint8_t TH02::readRegister(uint8_t reg, uint8_t * value)
 
   if ( ret == 0) 
   {
-    Wire.requestFrom( _address, 1);  
+    Wire.requestFrom( (uint8_t) _address, (uint8_t) 1);  
 
     if (Wire.available() != 1)
       // Other error as Wire library
