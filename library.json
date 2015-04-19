@@ -1,0 +1,11 @@
+{
+    "name": "TH02",
+    "keywords": "th02, humidity, sensor, hoperf, i2c",
+    "description": "Library for TH02 humidity sensor by HopeRF",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hallard/TH02.git"
+    },
+    "frameworks": "arduino",
+    "platforms": "atmelavr"
+}
