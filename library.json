@@ -2,6 +2,11 @@
     "name": "TH02",
     "keywords": "th02, temperature, humidity, sensor, hoperf, i2c",
     "description": "Library for TH02 temperature and humidity sensor by HopeRF",
+     "authors":
+    {
+        "name": "Charles-Henri Hallard",
+        "url": "http://hallard.me/th02/"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/hallard/TH02.git"
